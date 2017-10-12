@@ -8,6 +8,10 @@ to be used for network communication.
 This library was originally developed for a real-time space strategy game
 and has since been moved into its own project.
 
+## Building and Using
+SunNet uses CMake for its build process. 
+
+## Technical Information
 This is meant to be a super-simple drop in for network communication using
 a channeled-callback strategy. SunNet makes the following assumptions:
 
