@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <set>
 #include "channels.h"
-#include "socket_connection.hpp"
+#include "socket_connection.h"
 #include "channel_subscription.h"
 #include "channeled_socket_connection.h"
 

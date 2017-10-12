@@ -1,5 +1,5 @@
 #pragma once
-#include "socket_connection.hpp"
+#include "socket_connection.h"
 #include "channels.h"
 
 namespace SunNet {

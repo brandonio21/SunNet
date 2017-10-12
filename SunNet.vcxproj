@@ -75,6 +75,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>include\</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -82,6 +83,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>include\</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -91,6 +93,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -104,6 +107,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -111,27 +115,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="channels.cpp" />
-    <ClCompile Include="channel_subscribable.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="pollservice.cpp" />
-    <ClCompile Include="socketutil.cpp" />
-    <ClCompile Include="socket_connection.cpp" />
+    <ClInclude Include="include\channeled_client.h" />
+    <ClInclude Include="include\channeled_server.h" />
+    <ClInclude Include="include\channeled_socket_connection.h" />
+    <ClInclude Include="include\channels.h" />
+    <ClInclude Include="include\channel_subscribable.h" />
+    <ClInclude Include="include\channel_subscription.h" />
+    <ClInclude Include="include\client.h" />
+    <ClInclude Include="include\pollservice.h" />
+    <ClInclude Include="include\server.h" />
+    <ClInclude Include="include\socketutil.h" />
+    <ClInclude Include="include\socket_collection.h" />
+    <ClInclude Include="include\socket_connection.h" />
+    <ClInclude Include="include\tcp_socket_connection.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="channeled_client.h" />
-    <ClInclude Include="channeled_server.h" />
-    <ClInclude Include="channeled_socket_connection.h" />
-    <ClInclude Include="channel_subscription.h" />
-    <ClInclude Include="client.h" />
-    <ClInclude Include="channel_subscribable.h" />
-    <ClInclude Include="channels.h" />
-    <ClInclude Include="pollservice.h" />
-    <ClInclude Include="server.h" />
-    <ClInclude Include="socketutil.h" />
-    <ClInclude Include="socket_collection.h" />
-    <ClInclude Include="socket_connection.hpp" />
-    <ClInclude Include="tcp_socket_connection.hpp" />
+    <ClCompile Include="src\channels.cpp" />
+    <ClCompile Include="src\channel_subscribable.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\pollservice.cpp" />
+    <ClCompile Include="src\socketutil.cpp" />
+    <ClCompile Include="src\socket_connection.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
