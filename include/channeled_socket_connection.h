@@ -53,7 +53,7 @@ namespace SunNet {
 		*/
 		template <typename TMessageType>
 		std::unique_ptr<NETWORK_BYTE[]> channeled_read() {
-			return this->read(Channels::getChannelId<TMessageType>());
+			return this->channeled_read(Channels::getChannelId<TMessageType>());
 		}
 
 		/**

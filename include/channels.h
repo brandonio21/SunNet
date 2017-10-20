@@ -9,6 +9,9 @@
 namespace SunNet {
 	typedef NETWORK_BYTE CHANNEL_ID;
 
+	template <class TData>
+  class Channel;
+
 	/**
 	A C++ hack to allow typed classes to be put into containers. All channel classes,
 	despite type, will inherit from this "interface".

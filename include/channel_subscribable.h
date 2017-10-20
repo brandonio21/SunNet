@@ -85,7 +85,7 @@ namespace SunNet {
 			std::shared_ptr<ChannelSubscriptionInterface> subscription = this->subscriptions.at(channel_id);
 
 			std::shared_ptr<ChannelSubscription<TSubscriptionType>> typed_subscription = (
-				std::static_pointer_cast<ChannelSubscription<TSubscriptionType>>(subscription);
+				std::static_pointer_cast<ChannelSubscription<TSubscriptionType>>(subscription)
 			);
 
 			if (typed_subscription->unsubscribe(id)) {
