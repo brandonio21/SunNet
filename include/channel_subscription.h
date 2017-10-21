@@ -67,7 +67,7 @@ namespace SunNet {
 
 		void propagate_to_handlers(ChanneledSocketConnection_p sender, std::unique_ptr<NETWORK_BYTE[]> data) {
 			/* Take ownership of the bytes */
-			std::shared_ptr<NETWORK_BYTE> shared_data = std::move(data);
+			std::shared_ptr<NETWORK_BYTE[]> shared_data = std::move(data);
 
 			/* Typecast them for our lovely subscribers */
 			auto p = reinterpret_cast<typename std::shared_ptr<TSubscriptionType>::element_type*>(shared_data.get());
