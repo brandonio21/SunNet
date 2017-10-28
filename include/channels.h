@@ -54,7 +54,7 @@ namespace SunNet {
 		*/
 		template <class TChannelType>
 		static CHANNEL_ID getChannelId() {
-			auto& id_it = types_to_ids.find(typeid(TChannelType));
+			const auto& id_it = types_to_ids.find(typeid(TChannelType));
 			if (id_it == types_to_ids.end()) {
 				throw BadChannelException();
 			}

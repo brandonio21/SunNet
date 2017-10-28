@@ -118,7 +118,7 @@ namespace SunNet {
 			address(address), port(port), listen_queue_size(listen_queue_size), poll_timeout(poll_timeout), state(CLOSED) {
 
 			/* Bind the template arguments to a function we can use to re-create the connection */
-			this->connection_create_func = []() { return std::make_shared<TSocketConnection>(args...);  };
+			this->connection_create_func = [=]() { return std::make_shared<TSocketConnection>(args...);  };
 			this->poll_service = PollService(poll_timeout);
 		}
 

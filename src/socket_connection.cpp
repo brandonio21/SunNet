@@ -1,10 +1,11 @@
 #include "socket_connection.h"
 
 #include <string>
+#include <cstring>
 
 namespace SunNet {
-	std::atomic_uint SocketConnection::open_connection_count = 0;
-	std::atomic_uint SocketConnection::initializations = 0;
+	std::atomic_uint SocketConnection::open_connection_count(2);
+	std::atomic_uint SocketConnection::initializations(0);
 
 	SocketConnection::SocketConnection(int domain, int type, int protocol) {
 		if (SocketConnection::open_connection_count++ == 0) {
@@ -142,7 +143,6 @@ namespace SunNet {
 			this->address_info->info->ai_addr, (SOCKET_LEN) this->address_info->info->ai_addrlen);
 
 		if (connect_result == SOCKET_ERROR) {
-			int err = WSAGetLastError();
 			throw ConnectException(std::to_string(get_previous_error_code()));
 		}
 

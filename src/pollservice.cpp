@@ -23,7 +23,7 @@ namespace SunNet {
 	}
 
 	void PollService::remove_socket(const SocketConnection_p socket) {
-		auto& info = this->poll_descriptor_map.find(socket->socket_descriptor);
+		const auto& info = this->poll_descriptor_map.find(socket->socket_descriptor);
 		if (info == this->poll_descriptor_map.end()) {
 			/* Socket is already gone! */
 			return;
@@ -56,7 +56,7 @@ namespace SunNet {
 		else if (poll_return > 0) {
 			for (auto poll_iter = this->descriptors.begin(); poll_iter != this->descriptors.end(); ++poll_iter) {
 				if (poll_iter->revents & (POLLIN | POLLERR | POLLNVAL | POLLHUP)) {
-					auto& socket_iter = this->poll_descriptor_map.find(poll_iter->fd);
+					const auto& socket_iter = this->poll_descriptor_map.find(poll_iter->fd);
 					if (socket_iter == this->poll_descriptor_map.end()) {
 						/* 
 						Something weird has happened. We've encountered something for a socket we are not keeping track of anymore.

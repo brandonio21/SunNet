@@ -62,6 +62,6 @@ namespace SunNet {
 
 		template <class ... ArgType>
 		ChanneledServer(std::string address, std::string port, int listen_queue_size, int poll_timeout, ArgType ... args) :
-			Server(address, port, listen_queue_size, poll_timeout, args...) {}
+			Server<TSocketConnectionType>(address, port, listen_queue_size, poll_timeout, args...) {}
 	};
 }

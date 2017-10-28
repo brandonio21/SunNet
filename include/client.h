@@ -4,6 +4,7 @@
 #include <vector>
 #include <thread>
 #include <initializer_list>
+#include <functional>
 
 namespace SunNet {
 	/**
@@ -79,7 +80,7 @@ namespace SunNet {
 	public:
 		template <class ... ArgTypes>
 		Client(int poll_timeout, ArgTypes ... args) : state(CLIENT_CLOSED) {
-			this->connection_create_func = []() { return std::make_shared<TSocketConnection>(args...); };
+			this->connection_create_func = [=]() { return std::make_shared<TSocketConnection>(args...); };
 			this->poll_service = PollService(poll_timeout);
 		}
 

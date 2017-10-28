@@ -43,7 +43,7 @@ namespace SunNet {
 #else
 		status = shutdown(socket, SHUT_RDWR);
 		if (status == 0) {
-			status = close(sock);
+			status = close(socket);
 		}
 #endif
 

@@ -52,7 +52,7 @@ namespace SunNet {
 		*/
 		template <class Iter>
 		void add_sockets(Iter& begin, Iter& end) {
-			for (auto it = begin, it != end; ++it) {
+			for (auto it = begin; it != end; ++it) {
 				this->add_socket(*it);
 			}
 		}

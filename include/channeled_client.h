@@ -36,7 +36,8 @@ namespace SunNet {
 
 	public:
 		template <class ... ArgTypes>
-		ChanneledClient(int poll_timeout, ArgTypes ... args) : Client(poll_timeout, args...) {}
+		ChanneledClient(int poll_timeout, ArgTypes ... args) :
+      Client<TSocketConnection>(poll_timeout, args...) {}
 
 		/**
 		Send a message upon a specific channel. The channel is determined
