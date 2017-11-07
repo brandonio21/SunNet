@@ -4,7 +4,7 @@
 #include <cstring>
 
 namespace SunNet {
-	std::atomic_uint SocketConnection::open_connection_count(2);
+	std::atomic_uint SocketConnection::open_connection_count(0);
 	std::atomic_uint SocketConnection::initializations(0);
 
 	SocketConnection::SocketConnection(int domain, int type, int protocol) {
