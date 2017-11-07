@@ -22,8 +22,8 @@ a channeled-callback strategy. SunNet makes the following assumptions:
 A few goals remain:
 
 
-0. Ensure actual Linux compat
-1. Port to CMake for true cross-platform support
+0. ~Ensure actual Linux compat~
+1. ~Port to CMake for true cross-platform support~
 2. Enforce byte-ordering to make platform agnostic
 3. Home grown serialization to make platform agnostic
 4. Overall code improvement
