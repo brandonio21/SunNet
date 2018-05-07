@@ -5,7 +5,7 @@ Sunnet
 Sunnet is a platform agnostic, modern C++ wrapper around BSD Sockets/WinSock 
 to be used for network communication.
 
-This library was originally developed for a real-time space strategy game
+This library was originally developed for a [Heliocentric: A real-time space strategy game](https://github.com/denthos/heliocentric)
 and has since been moved into its own project.
 
 ## Building and Using
